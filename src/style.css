@@ -1,0 +1,269 @@
+@font-face {
+  font-family: 'rwj';
+  src: url('font/rwj.eot?25543807');
+  src: url('font/rwj.eot?25543807#iefix') format('embedded-opentype'),
+       url('font/rwj.woff?25543807') format('woff'),
+       url('font/rwj.ttf?25543807') format('truetype'),
+       url('font/rwj.svg?25543807#rwj') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.rwj-icon
+{
+  font-family: "rwj";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+ 
+  /* fix btns height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* You can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, .3); */
+}
+
+body{
+	margin: 0;
+	padding: 0;
+}
+
+a,a:hover{
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.header{
+	height: 140px;
+	padding: 60px 150px;
+	background: #3344B2;
+	color: #fff;
+}
+.container{
+	margin:30px auto;
+	width: 100vw;
+	position: relative;
+}
+
+.panel{
+	margin: 0 auto;
+	width: 80vw;
+	border: 1px solid #ddd;
+	padding: 20px;
+}
+
+.r-input{
+	width: 100%;
+	line-height: 32px;
+    display: inline-block;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box; /* Firefox */
+	-webkit-box-sizing:border-box;
+    font-size: 12px;
+    color: rgba(0,0,0,.65);
+    background-color: #fff;
+	border: 1px solid #eee;
+    border-radius: 4px;
+    padding-left: 8px;
+}
+.r-input:focus {
+    outline: 0;
+    box-shadow: 0 0 0 2px rgba(16,142,233,.2);
+}
+.r-input:hover {
+    border-color: #49a9ee;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+.btn{
+	width: 100%;
+	height: 33px;
+	font-size: 14px;
+	letter-spacing: 10px;
+	text-indent: 10px;
+	border:0;
+	border-radius: 4px;
+	margin: 2px 0;
+	color: #fff;
+	cursor: pointer;
+}
+.primary{
+	background: rgb(43,140,254);
+}
+.secondary{
+	background: rgb(254,40,154);
+}
+.btn:hover{
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+.btn.primary:hover{
+	background: rgb(80,165,254);
+}
+.btn.secondary:hover{
+	background: rgb(250,90,150);
+}
+/* login page starts */
+#layer{
+	width: 100vw;
+	height: 100vh;
+	background: rgba(0,0,0,.1);
+	position: fixed;
+}
+#loginBox {
+	height: 350px;
+	width: 320px;
+	position: fixed;
+	top: 16vh;
+	left: 50%;
+	margin-left: -200px;
+	padding: 10px 50px 20px 50px;
+	background: #fff;
+	box-shadow: 0 10px 60px rgba(0, 0, 0, .24);
+	border-radius: 4px;
+}
+.loginText{
+	text-align: center;
+	font-weight: 700;
+	font-size: 30px;
+	margin: 20px;
+}
+.field{
+	margin-bottom: 7px;
+}
+.field i{
+	position: fixed;
+	padding-top: 10px;
+	margin-left: 10px;
+}
+#password.r-input,#username.r-input{
+	padding-left: 30px;
+}
+
+.remember-password{
+	margin: 15px;
+	font-size:12px;
+	color: #999;
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+}
+.forget-password{
+	font-size: 12px;
+	float: right;
+	margin: 15px;
+}
+.tip{
+	font-size:12px;
+	color: #999;
+	margin-bottom: 15px;
+}
+/* login page ends */
+
+/* dashboard page starts */
+
+.detail{
+	color: #ddd;
+	font-size: 14px;
+}
+.toolbar{
+	width: 460px;
+    padding: 10px;
+    margin: 0 auto;
+}
+.item{
+	border: 1px solid #DDD;
+	border-radius: 40px;
+	width: 100px;
+	height: 40px;
+	text-align: center;
+	margin: 2px;
+	display: inline-block;
+	line-height: 40px;
+	cursor: pointer;
+	background: #fff;
+}
+.item:hover{
+	color: #fff;
+	background: #08F;
+	-webkit-transition: .3s ease;
+    transition: .3s ease;
+}
+.r-table{
+	width: 100%;
+	font-size: 12px;
+	border-collapse: separate;
+	color: #5a5e66;
+}
+.r-table td{
+	vertical-align: middle;
+	border-bottom: 1px solid #e6ebf5;
+}
+.r-table thead>tr>th{
+	padding: 16px 8px;
+	word-break: break-all;
+	font-weight: 500;
+}
+.r-table td{
+	line-height: 23px;
+	word-break: break-all;
+	overflow: hidden;
+	padding: 12px 0;
+	text-align: center;
+}
+.r-table tr:hover>td{
+	border-bottom: 2px solid #5893FF;
+	background: #f5f7fa;
+}
+
+.deleteOne:hover,.editOne:hover{
+	color: #50ACDF;
+}
+.remove-user:hover{
+	background: #fa5555!important;
+}
+.r-label{
+	float: left;
+	text-align: right;
+	position: relative;
+	padding-right: 10px;
+	line-height: 36px;
+	width:40px;
+    font-size: 14px;
+    color: #5a5e66;
+}
+.left-input{
+	height: 40px;
+	margin: 20px 0 20px 50px;
+	position: relative;
+}
+.editOne,.deleteOne{
+	cursor: pointer;
+}
+.err{
+	font-size: 12px;
+    color: red;
+    padding: 10px;
+}

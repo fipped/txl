@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block title %}控制面板{% endblock %}
+{% block title2 %}控制面板{% endblock %}
+{% block content %}
+<div class="container">
+        <div class="toolbar">
+            <div class="item" onclick="location.href = '{% url 'edit' %}';">
+                <i class="rwj-icon icon-user-add">&#xe802;</i>添加
+            </div>
+            <div class="item" onclick="removeSelectUser()">
+                <i class="rwj-icon icon-user-delete">&#xe805;</i>删除
+            </div>
+            <div class="item logout" onclick="location.href = '{% url 'logout' %}';">
+                登出
+            </div>
+        </div>
+        <div class="panel">
+            {% csrf_token %}
+            <table class="r-table" cellpadding="0" cellspacing="0" border="0">
+                <thead>
+                    <tr>
+                        <th>
+                            <input onclick="ckAll(this.checked)" type="checkbox">
+                        </th>
+                        <th><i class="rwj-icon icon-user">&#xe800;</i> 姓名</th>
+                        <th><i class="rwj-icon icon-phone">&#xe806;</i> 电话</th>
+                        <th><i class="rwj-icon icon-mail-alt">&#xf0e0;</i> 邮箱</th>
+                        <th><i class="rwj-icon icon-home">&#xe807;</i> 地址</th>
+                        <th><i class="rwj-icon icon-qq">&#xf1d6;</i> QQ</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    {% for res in data %}
+                        <tr data-id="{{ res.pk }}">
+                            <td>
+                                <input name="ckUser" type="checkbox">
+                            </td>
+                            <td>{{ res.name }}</td>
+                            <td>{{ res.phone }}</td>
+                            <td>{{ res.email }}</td>
+                            <td>{{ res.address }}</td>
+                            <td>{{ res.qq }}</td>
+                            <td>
+                                <i class="rwj-icon icon-user-delete deleteOne" title="删除">&#xe805;</i>
+                                <i class="rwj-icon icon-pencil-neg editOne" title="修改" onclick="location.href='{% url 'edit' %}{{ res.pk }}';">&#xe804;</i>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}

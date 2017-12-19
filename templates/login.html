@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}登录{% endblock %}
+{% block title2 %}登录{% endblock %}
+{% block content %}
+    <div id="layer"></div>
+    <div id="loginBox">
+        <form method="post" id="login-form" onsubmit="return false;">
+            {% csrf_token %}
+            <div class="loginText">by 通讯录</div>
+            <div class="field">
+                <span id="icon"><i class="rwj-icon icon-user">&#xe800;</i></span>
+                <input class="r-input" type="text" id="username" name="username" placeholder="用户名" maxlength="30">
+            </div>
+            <div class="field">
+                <span id="icon"><i class="rwj-icon icon-lock">&#xe801;</i></span>
+                <input class="r-input" type="password" id="password" name="password" placeholder="密码" maxlength="30">
+            </div>
+            <label class="remember-password">
+                <input class="r-checkbox" type="checkbox" /> 为我记住密码</label>
+            <a class="forget-password" href="">密码找回</a>
+            <div class="err"></div>
+            <button class="btn primary" onclick="Login();">
+                <span>登录</span>
+            </button>
+            <button id="r-button" class="btn secondary" onclick="SignUp();">
+                <span>注册</span>
+            </button>
+        </form>
+
+    </div>
+{% endblock %}

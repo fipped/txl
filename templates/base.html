@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %} - by通讯录</title>
+    <link rel="stylesheet" href="{% static "style.css" %}">
+</head>
+
+<body>
+    <div class="header">
+        <h1 class="title"><i class="rwj-icon icon-address-book">&#xe803;</i> [ {% block title2 %}{% endblock %} ] - by通讯录</h1>
+        <p class="detail">
+            {% block subtitle %}记录和管理你的联系人{% endblock %}
+        </p>
+    </div>
+    {% block content %}
+    {% endblock %}
+</body>
+<script src="{% static "jquery-3.2.1.min.js" %}"></script>
+<script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
+
+<script src="{% static "script.js" %}"></script>
+</html>
