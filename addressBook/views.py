@@ -30,8 +30,8 @@ class EditView(View):
     def get(self, request, pk=0):
         if pk:
             one_record = get_object_or_404(AddressBook,pk=pk)
-            return render(request, self.template_name, {'oneRecord': one_record, 'pk': pk})
-        return render(request, self.template_name)
+            return render(request, self.template_name, {'oneRecord': one_record, 'pk': pk, 'title': "修改联系人"})
+        return render(request, self.template_name, {'title': '添加联系人'})
 
     @method_decorator(login_required)
     def post(self, request, pk=0):

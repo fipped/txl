@@ -2,6 +2,8 @@
 
 ### 概述
 
+Django 2.0 / Python 3.6
+
 用 Django 框架实现的简易通讯录
 
 - [x] 前端
@@ -58,3 +60,6 @@ python3 manage.py collectstatic
 ```
 
 然后再部署.
+
+访问 127.0.0.1:8000
+
